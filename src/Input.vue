@@ -1,10 +1,9 @@
 <template>
     <div>
-        
-        <input type="text" v-model="msg" /> <!--v-model binds data from data property -->
+        <p>{{ msg }}</p>
+        <input type="text" v-model="message" /> <!--v-model binds data from data property -->
         <p> {{ message }}</p>
     </div>
-
 </template>
 
 <script>

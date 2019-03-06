@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Message from './Message.vue'
+import Student from './Student.vue'
 
-Vue.component('app-message', Message); //registers my component so now I can use app-message selector
+Vue.component('app-student', Student); //registers my component so now I can use app-message selector
 
 new Vue({
   el: '#app',
