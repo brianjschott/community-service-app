@@ -1,10 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Student from './Student.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import "./firebase";
+import Student from "./Student.vue";
+import VueFire from "vuefire";
 
-Vue.component('app-student', Student); //registers my component so now I can use app-message selector
+Vue.use(VueFire);
+
+Vue.component("app-student", Student); //registers my component so now I can use app-message selector
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App)
-})
+});
