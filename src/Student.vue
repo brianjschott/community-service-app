@@ -20,6 +20,7 @@
 
 import { initializeApp } from "firebase";
 import { studentRecordsref } from "./firebase";
+import { google} from "google-charts";
 
 export default {
   props: [],
