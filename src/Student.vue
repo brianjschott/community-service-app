@@ -25,7 +25,18 @@ export default {
       message: "hi"
     };
   },
-  methods: {}
+  firebase: {
+    studentrecords: studentRecordsref
+  },
+  methods: {
+    submitData() {
+      studentRecordsref.push({
+        name: this.name,
+        hours: this.hour,
+        organization: this.organization
+      });
+    }
+  }
 };
 </script>
 
