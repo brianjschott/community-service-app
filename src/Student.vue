@@ -17,6 +17,10 @@
 </template>
 
 <script>
+
+import { initializeApp } from "firebase";
+import { studentRecordsref } from "./firebase";
+
 export default {
   props: [],
   //this is ES6 syntax, otherwise I would have to say data: function() {}
