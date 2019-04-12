@@ -26,22 +26,32 @@ export default {
   //this is ES6 syntax, otherwise I would have to say data: function() {}
   data() {
     return {
-      message: "hi"
+      options: {'title':'My Average Day', 'width':550, 'height':400},
+      chart: new google.visualization.PieChart(document.getElementById('piechart'))
+
     };
   },
   firebase: {
     studentrecords: studentRecordsref
   },
   methods: {
-    submitData() {
+    submitData: function() {
       studentRecordsref.push({
         name: this.name,
         hours: this.hour,
         organization: this.organization
-      });
+      })
+    },
+      drawChart: function() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Hours_Worked', 2],
+          ['Hours_notworked', 2]
+        ]);
+      }
     }
   }
-};
+
 </script>
 
 <style>
