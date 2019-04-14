@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Hey elijah don't forget to order these-->
+        <!--FrontEnders logo or no? I'll leave the code blank for now-->
+        <link rel="icon" href="logo.png"/>
+        <title>Form Submission | </title>
+        <link rel="stylesheet" href="form.css" type="text/css"/>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Encode+Sans+Condensed|Open+Sans|Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
+        <script type="text/javascript" src="form.js"></script>
+    </head>
+    <body>
+        <h1>Community Service hours submission form:</h1>
+        <div class="col s6">
+            <div class="row" id="name">
+                <!--These col s6 are used to adjust to screen size and cannot be changed trust me I tried and it is a no no. -->
+                <h3>Student information:</h3>
+                <div class="input-field col s6">
+                    <!--Gets name from database and fills in here-->
+                    <input value="" id="firstName" type="text" class="validate">
+                    <label class="active" for="firstName">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="" id="lastName" type="text" class="validate">
+                    <label class="active" for="lastName">Last Name</label>
+                </div>
+            </div>
+
+            <div class="row" id="email">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Student's Email</label>
+                    <span class="helper-text" data-error="Please enter a valid email address"></span>
+                </div>
+            </div>
+
+            <!--Does autofill take over here or can I put in a dropdown-->
+            <div class="row" id="serviceDescription">
+                <div class="input-field col s12">
+                    <textarea id="textarea" class="materialize-textarea"></textarea>
+                    <label for="textarea">Service Description</label>
+                </div>
+            </div>
+            <div class="row">
+            <!--I'm trying to think of away to keep them as boxes first-->
+            <!--<table id="rating">
+                <tr>
+                    <td></td>
+                    <th>Excellent</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Needs Improvement</th>
+                </tr>
+                <tr>
+                    <th>Attitude</th>
+                    <td>
+                        <p>
+                            <label id="atxe">
+                                <input type="checkbox"    />
+                                <span></span>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <label>
+                                <input type="checkbox"    />
+                                <span></span>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <label>
+                                <input type="checkbox"    />
+                                <span></span>
+                            </label>
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <label>
+                                <input type="checkbox"    />
+                                <span></span>
+                            </label>
+                        </p>
+                    </td>
+                </tr>
+                At this point elijah gave up on spacing
+                <tr>
+                    <th>Punctuality</th>
+                    <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                                <p>
+                                    <label>
+                                        <input type="checkbox"    />
+                                        <span></span>
+                                    </label>
+                                </p>
+                            </td>
+                </tr>
+                <tr>
+                    <th>Assumes Responsibilty</th>
+                    <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                </tr>
+                <tr>
+                    <th>Performace</th>
+                    <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"  />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <label>
+                                    <input type="checkbox"    />
+                                    <span></span>
+                                </label>
+                            </p>
+                        </td>
+                </tr>                
+            </table>-->
+            <div class="input-field col s6">
+                    <!--Gets name from database and fills in here-->
+                    <input value="" id="firstName" type="text" class="validate">
+                    <label class="active" for="firstName">
+                    <!-- Dropdown Trigger -->
+                        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+                    <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                          </ul>
+                    </label>
+            </div>
+            <div class="input-field col s6">
+                    <input value="" id="lastName" type="text" class="validate">
+                    <label class="active" for="lastName">Last Name</label>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
