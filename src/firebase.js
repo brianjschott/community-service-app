@@ -10,4 +10,9 @@ const app = initializeApp({
 });
 
 export const db = app.database();
-export const studentRecordsref = db.ref("studentrecords");
+export const studentRecordsref = db.ref("studentrecords"); //will be deprecated shortly, kept for legacy code
+
+//three collections on firebase
+export const communityServiceEventsref = db.ref("community-service-events")
+export const studentRecordsNewref = db.ref("students") //named this one "new" to differentiate it from the other one
+export const organizationsRecordsref = db.ref("organizations")
