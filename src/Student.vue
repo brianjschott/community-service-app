@@ -12,6 +12,11 @@
       <h4>Welcome <!--This will be replaced with the student's name -->Student,</h4>
     </div>
     <div id="piechart">
+      <GChart 
+        type = "PieChart"
+        :data =  "hoursData"
+        :options = "hoursChartOptions"
+        />
     </div>
   </div>
 </template>
@@ -20,16 +25,29 @@
 
 import { initializeApp } from "firebase";
 import { studentRecordsref } from "./firebase";
-
+import { GChart } from 'vue-google-charts'
 
 export default {
   props: [],
-
+  components: {
+    GChart
+  },
   data() {
     return {
       options: {'title':'My Average Day', 'width':550, 'height':400},
-      chart: new GoogleCharts.api.visualization.PieChart(document.getElementById('piechart'))
-
+      hoursData: [
+          ['Hours', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ],
+      hoursChartOptions: {
+        chart: {
+          title: 'Overall Community Service Progress'
+        }
+      }
     };
   },
   firebase: {
@@ -43,13 +61,7 @@ export default {
         organization: this.organization
       })
     },
-      drawChart: function() {
-        var data = GoogleCharts.api.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Hours_Worked', 2],
-          ['Hours_notworked', 2]
-        ]);
-      }
+      drawChart: function() { }
     },
     beforeMount() {
       this.drawChart();
