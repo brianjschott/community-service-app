@@ -2,12 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import "./firebase";
 import Student from "./Student.vue";
-import VueFire from "vuefire";
-import { initializeApp } from "firebase";
-import { studentRecordsref } from "./firebase";
+import VueFirestore from 'vue-firestore';
 
+Vue.use(VueFirestore);
 
-Vue.use(VueFire);
+Vue.config.productionTip = false;
 
 Vue.component("app-student", Student); //registers my component so now I can use app-message selector
 

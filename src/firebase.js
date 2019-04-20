@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase";
+import { firebase } from "@firebase/app";
+import "@firebase/firestore";
 
-const app = initializeApp({
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyDdbPpq-EafhHH7x7-XPhMmIzSqhuxq9kY",
   authDomain: "community-service-45b09.firebaseapp.com",
   databaseURL: "https://community-service-45b09.firebaseio.com",
@@ -9,10 +10,10 @@ const app = initializeApp({
   messagingSenderId: "126445941357"
 });
 
-export const db = app.database();
-export const studentRecordsref = db.ref("studentrecords"); //will be deprecated shortly, kept for legacy code
+export const db = firebaseApp.firestore();
+//export const studentRecordsref = db.ref("studentrecords"); //will be deprecated shortly, kept for legacy code
 
 //three collections on firebase
-export const communityServiceEventsref = db.ref("community-service-events")
-export const studentRecordsNewref = db.ref("students") //named this one "new" to differentiate it from the other one
-export const organizationsRecordsref = db.ref("organizations")
+export const communityServiceEventsref = db.collection("community-service-events")
+export const studentRecordsNewref = db.collection("students") //named this one "new" to differentiate it from the other one
+export const organizationsRecordsref = db.collection("organizations")

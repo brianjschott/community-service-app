@@ -21,10 +21,8 @@
 
     <ul>
       <li 
-        v-for="i of studentrecords"
-        v-bind:key="i['.key']" 
-        >
-          {{i.studentName}}
+        v-for="i of studentrecords" :key="i['.key']">
+          {{i}}
         </li>
     </ul>   
 
@@ -42,7 +40,7 @@ export default {
   components: { 
     GChart
   },
-  firebase: {
+  firestore: {
     studentrecords: studentRecordsNewref,
     
   },
@@ -68,6 +66,7 @@ export default {
   methods: {
     
   },
+
   beforeMount() {
     }
   }
