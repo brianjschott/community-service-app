@@ -54,17 +54,11 @@ export default {
     studentrecords: studentRecordsref
   },
   methods: {
-    submitData: function() {
-      studentRecordsref.push({
-        name: this.name,
-        hours: this.hour,
-        organization: this.organization
-      })
-    },
-      drawChart: function() { }
-    },
+    
+  },
     beforeMount() {
       this.drawChart();
+      console.dir(studentRecordsref)
     }
   }
 
