@@ -57,7 +57,6 @@ export default {
     
   },
     beforeMount() {
-      this.drawChart();
       console.dir(studentRecordsref)
     }
   }
