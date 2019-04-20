@@ -9,7 +9,7 @@
     </div>
       
     <div id="welcome student">
-      <h4>Welcome <!--This will be replaced with the student's name -->Student,</h4>
+      <h4>Welcome!</h4>
     </div>
     <div id="piechart">
       <GChart 
@@ -18,19 +18,33 @@
         :options = "hoursChartOptions"
         />
     </div>
+
+    <ul>
+      <li 
+        v-for="i of studentrecords"
+        v-bind:key="i['.key']" 
+        >
+          {{i.studentName}}
+        </li>
+    </ul>   
+
   </div>
 </template>
 
 <script>
 
 import { initializeApp } from "firebase";
-import { studentRecordsref } from "./firebase";
+import { studentRecordsNewref } from "./firebase";
 import { GChart } from 'vue-google-charts'
 
 export default {
   props: [],
-  components: {
+  components: { 
     GChart
+  },
+  firebase: {
+    studentrecords: studentRecordsNewref,
+    
   },
   data() {
     return {
@@ -50,14 +64,11 @@ export default {
       }
     };
   },
-  firebase: {
-    studentrecords: studentRecordsref
-  },
+
   methods: {
     
   },
-    beforeMount() {
-      console.dir(studentRecordsref)
+  beforeMount() {
     }
   }
 
