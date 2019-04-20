@@ -20,8 +20,6 @@
 
 import { initializeApp } from "firebase";
 import { studentRecordsref } from "./firebase";
-import { GoogleCharts } from "google-charts";
-
 
 
 export default {
