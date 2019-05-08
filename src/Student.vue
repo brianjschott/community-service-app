@@ -13,8 +13,8 @@
     </div>
     <div id="piechart">
       <GChart 
-        type = "PieChart"
-        :data =  "hoursData"
+        type = "BarChart"
+        :data =  "studentHour"
         :options = "hoursChartOptions"
         />
     </div>
@@ -22,7 +22,7 @@
     <ul>
       <li 
         v-for="i of studentrecords" :key="i['.key']">
-          {{i}}
+          {{i.hour}}
         </li>
     </ul>   
 
@@ -32,7 +32,7 @@
 <script>
 
 import { initializeApp } from "firebase";
-import { studentRecordsNewref } from "./firebase";
+import { studentRecordsNewref , studentRecordsdata } from "./firebase";
 import { GChart } from 'vue-google-charts'
 
 export default {
@@ -41,7 +41,7 @@ export default {
     GChart
   },
   firestore: {
-    studentrecords: studentRecordsNewref,
+    studentrecords: studentRecordsdata
     
   },
   computed: {
@@ -49,32 +49,32 @@ export default {
   },
   data() {
     return {
-      
-      options: {'title':'My Average Day', 'width':550, 'height':400},
-      hoursData: [
-          ['Hours', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ],
+      totalHours: 20,
+      studentHour: [
+        ["Student Hour Bar", "Hours"],
+        ["Hours",totalHours]
+      ],
       hoursChartOptions: {
+        hAxis:{
+          minValue:0,
+          maxValue: 100
+        },
         chart: {
-          title: 'Overall Community Service Progress'
+          title: 'Overall Community Service Progress',
+          height: 500,
+          width: 500
         }
       }
     };
   },
 
-  methods: {
-    
-  },
+
 
   beforeMount() {
-    }
-  }
 
+  }
+}
+console.log(totalHours)
 </script>
 
 <style>

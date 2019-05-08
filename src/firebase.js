@@ -16,3 +16,4 @@ export const db = firebaseApp.firestore();
 export const communityServiceEventsref = db.collection("community-service-events")
 export const studentRecordsNewref = db.collection("students") //named this one "new" to differentiate it from the other one
 export const organizationsRecordsref = db.collection("organizations")
+export const studentRecordsdata = db.collection("studentrecords")
