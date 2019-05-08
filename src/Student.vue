@@ -44,8 +44,12 @@ export default {
     studentrecords: studentRecordsNewref,
     
   },
+  computed: {
+
+  },
   data() {
     return {
+      
       options: {'title':'My Average Day', 'width':550, 'height':400},
       hoursData: [
           ['Hours', 'Hours per Day'],

@@ -11,7 +11,6 @@ const firebaseApp = firebase.initializeApp({
 });
 
 export const db = firebaseApp.firestore();
-//export const studentRecordsref = db.ref("studentrecords"); //will be deprecated shortly, kept for legacy code
 
 //three collections on firebase
 export const communityServiceEventsref = db.collection("community-service-events")
