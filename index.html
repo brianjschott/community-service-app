@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="logo.png"/>
+    <title>| </title>
+    <link rel="stylesheet" href="homescreen.css" type="text/css"/>
     <meta charset="utf-8">
-    <title>community-service-app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Encode+Sans+Condensed|Open+Sans|Press+Start+2P|Roboto|Source+Code+Pro" rel="stylesheet">
   </head>
   <body>
     <div id="app"></div>
     <script src="/dist/build.js"></script>
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <!--This is where you can import the name of the student-->
+          <a href="#!" id="student_name">Browne, Elijah</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./statics.html">Stats</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--This is where the chart will appear once it works for now it pushes the table upwards.-->
+    <div id="chart"></div>
+
+    <div id="past_events">
+      <table class="highlight center">
+        <thead>
+          <tr>
+            <th>Organization</th>
+            <th>Hours</th>
+            <th>Aproval Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="organization">
+
+          </tr>
+          <tr id="Hours">
+
+          </tr>
+          <tr id="Aproval_Status">
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">insert_chart</i></a>
   </body>
 </html>
