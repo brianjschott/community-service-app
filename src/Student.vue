@@ -50,7 +50,7 @@ export default {
       
       studentHour: [
         ["Student Hour Bar", "Hours"],
-        ["Hours",totalHours]
+        ["Hours",this.totalHours]
       ],
       hoursChartOptions: {
         hAxis:{
