@@ -49,7 +49,7 @@ export default {
   },
   data() {
     return {
-      totalHours: 20,
+      
       studentHour: [
         ["Student Hour Bar", "Hours"],
         ["Hours",totalHours]
@@ -65,16 +65,25 @@ export default {
           width: 500
         }
       }
-    };
+    }
   },
+  computed() {
+    totalHours: {
+        let hours = 0;
+        for (i of studentrecords) {
+          hours += i.hours
+        }
+        console.log(hours)
+        return hours
+      }
 
+  },
 
 
   beforeMount() {
 
   }
 }
-console.log(totalHours)
 </script>
 
 <style>
