@@ -44,9 +44,7 @@ export default {
     studentrecords: studentRecordsdata
     
   },
-  computed: {
 
-  },
   data() {
     return {
       
