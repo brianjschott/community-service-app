@@ -67,8 +67,8 @@ export default {
       }
     }
   },
-  computed() {
-    totalHours: {
+  computed: {
+    totalHours: function() {
         let hours = 0;
         for (i of studentrecords) {
           hours += i.hours
