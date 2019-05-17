@@ -68,7 +68,7 @@ export default {
   computed: {
     totalHours: function() {
         let hours = 0;
-        for (i of studentrecords) {
+        for (i of this.$firestore.studentrecords) {
           hours += i.hours
         }
         console.log(hours)
